@@ -5,12 +5,18 @@
     <span class="mat-toolbar__description">— Front-End Developer</span>
     <span class="mat-toolbar__path">/ Portfolio</span>
     <span class="mat-toolbar__spacer"></span>
-    <a href="mailto: slav@belaev.pro" 
+    <a href="mailto:slav@belaev.pro" 
        mat-flat-button 
        matTooltipPosition="left"
        matTooltip="slav@belaev.pro"
        color="accent" 
        class="mat-toolbar__button"><mat-icon>email</mat-icon> Contact Me</a>
+    <a target="_blank" 
+       href="tg://resolve?domain=slavabelaev" 
+       matTooltip="My Telegram"
+       mat-icon-button>
+      <mat-icon svgIcon="telegram" class="icon_size_28"></mat-icon>
+    </a>
     <a target="_blank" 
        href="https://www.upwork.com/o/profiles/users/_~01e82aef512027f4ff/" 
        matTooltip="My Upwork Profile"
@@ -32,7 +38,7 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<main class="content-container">
+<main class="app__scroller">
   <router-outlet></router-outlet>
 </main>
 

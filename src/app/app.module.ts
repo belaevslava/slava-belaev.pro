@@ -66,5 +66,8 @@ export class AppModule {
     iconRegistry.addSvgIcon(
         'upwork',
         sanitizer.bypassSecurityTrustResourceUrl('assets/icons/Upwork.svg'));
+    iconRegistry.addSvgIcon(
+            'telegram',
+            sanitizer.bypassSecurityTrustResourceUrl('assets/icons/Telegram.svg'));
   }
 }

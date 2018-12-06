@@ -23,15 +23,17 @@
   overflow: hidden;
 }
 
-
+.mat-toolbar__title {
+  opacity: .96;
+}
 .mat-toolbar__description {
-  opacity: .24;
+  opacity: .48;
 }
 .mat-toolbar__path {
-  opacity: .12;
+  opacity: .24;
 }
 
-.content-container {
+.app__scroller {
   position: fixed;
   top: 64px;
   bottom: 0;

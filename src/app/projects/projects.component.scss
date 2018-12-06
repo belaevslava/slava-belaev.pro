@@ -20,13 +20,6 @@
 .mat-card-subtitle {
     color: #212121;
 }
-.mat-card-image {
-    transition: .7s;
-    filter: brightness(.7);
-    &:hover {
-        filter: brightness(1);
-    }
-}
 .projects {
     list-style: none;
     padding: 0;
@@ -66,6 +59,13 @@
     .projects__item {
         flex: 1 33.3333%;
         max-width: 33.3333%;
+    }    
+    .mat-card {
+        transition: .48s;
+        filter: brightness(.72);
+        &:hover {
+            filter: brightness(1);
+        }
     }
 }
 @media (min-width: 1300px) {
