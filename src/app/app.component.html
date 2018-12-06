@@ -1,21 +1,39 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img src="https://avatars2.githubusercontent.com/u/7487565?s=460&v=4" alt="Slava Belaev" class="mat-toolbar__avatar">
+    <span class="mat-toolbar__title">{{title}}</span>
+    <span class="mat-toolbar__description">— Front-End Developer</span>
+    <span class="mat-toolbar__path">/ Portfolio</span>
+    <span class="mat-toolbar__spacer"></span>
+    <a href="mailto: slav@belaev.pro" 
+       mat-flat-button 
+       matTooltipPosition="left"
+       matTooltip="slav@belaev.pro"
+       color="accent" 
+       class="mat-toolbar__button"><mat-icon>email</mat-icon> Contact Me</a>
+    <a target="_blank" 
+       href="https://www.upwork.com/o/profiles/users/_~01e82aef512027f4ff/" 
+       matTooltip="My Upwork Profile"
+       mat-icon-button>
+      <mat-icon svgIcon="upwork" class="icon_size_28"></mat-icon>
+    </a>
+    <a target="_blank" 
+       href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" 
+       matTooltip="My LinkedIn Profile"
+       mat-icon-button>
+      <mat-icon svgIcon="linked-in" class="icon_size_28"></mat-icon>
+    </a>
+    <a target="_blank" 
+       href="https://github.com/belaevslava" 
+       matTooltip="My GitHub Profile"
+       mat-icon-button>
+      <mat-icon svgIcon="github" class="icon_size_28"></mat-icon>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-<router-outlet></router-outlet>
+<main class="content-container">
+  <router-outlet></router-outlet>
+</main>
+
+

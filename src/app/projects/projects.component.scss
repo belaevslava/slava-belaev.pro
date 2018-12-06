@@ -1,0 +1,76 @@
+.mat-drawer__icon {
+    padding-right: 14px;
+}
+.mat-card-image {
+    display: block;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background-color: #212121;
+}
+.mat-card-image__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center top;
+}
+.mat-card-subtitle {
+    color: #212121;
+}
+.mat-card-image {
+    transition: .7s;
+    filter: brightness(.7);
+    &:hover {
+        filter: brightness(1);
+    }
+}
+.projects {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 1rem .5rem 0 .5rem;
+}
+.projects__item {
+    flex: 1 100%;
+    padding: 0 .5rem 1rem .5rem;
+    opacity: 0;
+    animation: animateOpacity 1.2s;
+    animation-fill-mode: forwards;
+    &:last-child {
+        margin-right: auto;
+    }
+    @for $i from 1 through 16 {
+        &:nth-child(#{$i}) {
+            animation-delay: .12s * $i;
+        }
+    }
+}
+
+@keyframes animateOpacity {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (min-width: 600px) {
+    .projects__item {
+        flex: 1 50%;
+        max-width: 50%;
+    }
+}
+@media (min-width: 960px) {
+    .projects__item {
+        flex: 1 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+@media (min-width: 1300px) {
+    .projects__item {
+        flex: 1 25%;
+        max-width: 25%;
+    }
+}

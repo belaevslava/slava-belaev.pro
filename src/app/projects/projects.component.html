@@ -1,0 +1,36 @@
+<ul class="projects" *ngIf="projects">
+  <ng-container *ngFor="let project of projects">
+    <li class="projects__item" *ngIf="project.homepage" [class.displayed]="project.homepage">
+      <mat-card>
+          <div mat-card-image> 
+            <a [style.backgroundImage]="'url(' + projectsService.contentApiUserUrl + project.name + '/master/' + details[project.name].previews.directory + '/' + details[project.name].previews.images[0].path + ')'" 
+              [attr.data-fancybox]="project.name"
+              [attr.data-caption]="details[project.name].previews.images[0].title"
+              data-width="1200"
+              target="_blank"
+              class="mat-card-image__link"
+              [href]="projectsService.contentApiUserUrl + project.name + '/master/' + details[project.name].previews.directory + '/' + details[project.name].previews.images[0].path"
+              *ngIf="details[project.name]?.previews">
+            </a>
+          </div>
+          <mat-card-subtitle>{{project.description}}</mat-card-subtitle>
+          <mat-card-actions>
+            <a mat-flat-button target="_blank" [href]="project.homepage" color="primary">See Demo</a>
+            <a mat-button target="_blank" [href]="project.html_url" color="accent"><mat-icon>code</mat-icon> Source</a>
+          </mat-card-actions>
+        </mat-card>
+
+        <div *ngIf="details[project.name]?.previews">
+          <ng-container *ngFor="let image of details[project.name].previews.images; let i = index">
+            <a  target="_blank"
+                *ngIf="i > 0"
+                data-width="1200"
+                [attr.data-caption]="image.title"
+                [attr.data-fancybox]="project.name"
+                [href]="projectsService.contentApiUserUrl + project.name + '/master/' + details[project.name].previews.directory + '/' + image.path">
+            </a>
+          </ng-container>
+        </div>
+    </li>
+  </ng-container>
+</ul>
