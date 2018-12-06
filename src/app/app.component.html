@@ -1,6 +1,11 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <img src="https://avatars2.githubusercontent.com/u/7487565?s=460&v=4" alt="Slava Belaev" class="mat-toolbar__avatar">
+    <a target="_blank" 
+       href="https://www.instagram.com/slava_belaev/" 
+       matTooltip="My Instagram"
+       class="mat-toolbar__avatar-link">
+      <img src="https://avatars2.githubusercontent.com/u/7487565?s=460&v=4" alt="Slava Belaev" class="mat-toolbar__avatar">
+    </a>
     <span class="mat-toolbar__title">{{title}}</span>
     <span class="mat-toolbar__description">— Frontend Developer</span>
     <span class="mat-toolbar__path">/ Portfolio</span>
@@ -8,30 +13,30 @@
     <a href="mailto:slav@belaev.pro" 
        mat-flat-button 
        matTooltipPosition="left"
-       matTooltip="slav@belaev.pro"
+       matTooltip="You will send a message to slav@belaev.pro"
        color="accent" 
        class="mat-toolbar__button"><mat-icon>email</mat-icon> Contact Me</a>
     <a target="_blank" 
-       href="tg://resolve?domain=slavabelaev" 
+       href="tg://resolve?domain=slava_belaev" 
        matTooltip="My Telegram"
        mat-icon-button>
       <mat-icon svgIcon="telegram" class="icon_size_28"></mat-icon>
     </a>
     <a target="_blank" 
        href="https://www.upwork.com/o/profiles/users/_~01e82aef512027f4ff/" 
-       matTooltip="My Upwork Profile"
+       matTooltip="My Upwork"
        mat-icon-button>
       <mat-icon svgIcon="upwork" class="icon_size_28"></mat-icon>
     </a>
     <a target="_blank" 
        href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" 
-       matTooltip="My LinkedIn Profile"
+       matTooltip="My LinkedIn"
        mat-icon-button>
       <mat-icon svgIcon="linked-in" class="icon_size_28"></mat-icon>
     </a>
     <a target="_blank" 
        href="https://github.com/belaevslava" 
-       matTooltip="My GitHub Profile"
+       matTooltip="My GitHub"
        class="mat-icon-button__github"
        mat-icon-button>
       <mat-icon svgIcon="github" class="icon_size_28"></mat-icon>
