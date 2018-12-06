@@ -7,6 +7,10 @@
     height: 200px;
     overflow: hidden;
     background-color: #212121;
+    animation: animateOpacity 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: .36s;
 }
 .mat-card-image__link {
     position: absolute;
@@ -36,11 +40,6 @@
     animation-fill-mode: forwards;
     &:last-child {
         margin-right: auto;
-    }
-    @for $i from 1 through 16 {
-        &:nth-child(#{$i}) {
-            animation-delay: .12s * $i;
-        }
     }
 }
 

@@ -10,6 +10,9 @@ export interface ProjectDetails {
     homepage?: String;
     previews?: {
         directory: String;
+        main: {
+            path: String;
+        }
         images: {
             src?: String;
             thumb?: String;
