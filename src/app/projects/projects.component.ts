@@ -40,7 +40,6 @@ export class ProjectsComponent implements OnInit {
         .getRepositoryDetails(repositoryName)
         .subscribe(details => {
           this.details[repositoryName] = details;
-          if (!details.previews.main) console.log(details);
         });
   }
 }

@@ -11,7 +11,7 @@ import { Project, ProjectDetails } from './project';
 
 export class ProjectsService {
   apiUrl = 'https://api.github.com';
-  username = 'belaevslava';
+  username = 'slavabelaev';
   contentApiUrl = 'https://raw.githubusercontent.com';
   contentApiUserUrl = this.contentApiUrl + '/' + this.username + '/';
   private params = {

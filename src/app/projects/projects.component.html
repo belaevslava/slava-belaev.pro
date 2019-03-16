@@ -1,15 +1,15 @@
 <ul class="projects" *ngIf="projects">
   <ng-container *ngFor="let project of projects">
-    <li class="projects__item" *ngIf="project.homepage && details[project.name].previews.main.path" [class.displayed]="project.homepage">
+    <li class="projects__item" *ngIf="project?.homepage && details[project.name]?.previews?.main?.path" [class.displayed]="project.homepage">
       <mat-card>
           <div mat-card-image> 
             <a [style.backgroundImage]="'url(' + projectsService.contentApiUserUrl + project.name + '/master/' + details[project.name].previews.directory + '/' + details[project.name].previews.main.path + ')'" 
               [attr.data-fancybox]="project.name"
-              [attr.data-caption]="details[project.name].previews.images[0].title"
+              [attr.data-caption]="details[project.name]?.previews?.images[0]?.title"
               data-width="1200"
               target="_blank"
               class="mat-card-image__link"
-              [href]="projectsService.contentApiUserUrl + project.name + '/master/' + details[project.name].previews.directory + '/' + details[project.name].previews.images[0].path"
+              [href]="projectsService.contentApiUserUrl + project?.name + '/master/' + details[project.name].previews?.directory + '/' + details[project.name].previews.images[0].path"
               *ngIf="details[project.name]?.previews">
             </a>
           </div>
